@@ -10,6 +10,7 @@
 
 # production
 /build
+/public/color-palette.css
 
 # misc
 .DS_Store

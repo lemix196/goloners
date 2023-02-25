@@ -1,4 +1,4 @@
-import "./App.css";
+import classes from "./App.module.css"
 
 import Navbar from "./components/UI/Navbar";
 
@@ -6,8 +6,7 @@ function App() {
   return (
     <div>
       <Navbar />
-
-      <p> Hello. </p>
+      <img className={classes['background-image']} src={require("./images/header-photo.jpg")}></img>
     </div>
   );
 }

@@ -34,3 +34,5 @@ const MENU_DATA = [
     price: "20.99$",
   },
 ];
+
+export default MENU_DATA;

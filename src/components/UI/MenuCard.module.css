@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+
 .menu-card {
     z-index: 1;
     background-color: #ff894c;
@@ -9,4 +11,5 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px black;
+    font-family: "Dosis", sans-serif;
 }

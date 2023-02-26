@@ -1,0 +1,30 @@
+.dish {
+    align-self: left;
+    width: 100%;
+}
+
+.dish-name {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.dish-description {
+    width: 75%;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.dish-price {
+    color: #f8f8f8;
+  font-size: 1.3rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.menu-separator {
+  border-color: #363636;
+  opacity: 0.4;
+}

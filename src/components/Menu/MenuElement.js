@@ -4,12 +4,12 @@ import styles from "./MenuElement.module.css";
 
 const MenuElement = (props) => {
   return (
-    <React.Fragment>
-      <h2>{props.dishName}</h2>
-      <p>{props.description}</p>
-      <h2>{props.price}</h2>
-      <hr/>
-    </React.Fragment>
+    <div className={styles['dish']}>
+      <h2 className={styles['dish-name']}>{props.dishName}</h2>
+      <p className={styles['dish-description']}>{props.description}</p>
+      <h2 className={styles['dish-price']}>{props.price}</h2>
+      <hr className={styles['menu-separator']}/>
+      </div>
   );
 };
 

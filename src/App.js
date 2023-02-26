@@ -2,6 +2,7 @@ import classes from "./App.module.css";
 
 import Navbar from "./components/UI/Navbar";
 import Card from "./components/UI/Card";
+import MenuCard from "./components/UI/MenuCard";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           We use only finest and natural meat, straight from local breeders.
         </p>
       </Card>
+      <MenuCard></MenuCard>
     </div>
   );
 }

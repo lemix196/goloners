@@ -1,0 +1,39 @@
+.add-dish-form {
+  display: inline-block;
+  position: relative;
+  left: 10%;
+  bottom: 5px;
+}
+
+.add-dish-form-label {
+  padding: 10px;
+  font-weight: 600;;
+}
+
+.add-dish-form-input {
+  width: 10%;
+  border-radius: 5px;
+  height: 1.5rem;
+  width: 3rem;
+  border-style: ridge;
+}
+
+.add-dish-form-button {
+  display: block;
+  border-radius: 15px;
+  height: 2rem;
+  width: 6rem;
+  margin: 10px;
+  border: none;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: #dc2f2f;
+  transition: 0.4s background-color;
+}
+
+.add-dish-form-button:hover {
+  background-color: #f8f8f8;
+  transition: 0.4s background-color;
+
+}

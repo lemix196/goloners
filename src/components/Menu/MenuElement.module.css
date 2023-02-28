@@ -1,6 +1,7 @@
 .dish {
-    align-self: left;
-    width: 100%;
+  display: inline-block;
+  align-self: left;
+  width: 75%;
 }
 
 .dish-name {
@@ -10,7 +11,7 @@
 }
 
 .dish-description {
-    width: 75%;
+  width: 75%;
   font-size: 1.2rem;
   font-style: italic;
   margin-top: 5px;
@@ -18,7 +19,7 @@
 }
 
 .dish-price {
-    color: #f8f8f8;
+  color: #f8f8f8;
   font-size: 1.3rem;
   margin-top: 5px;
   margin-bottom: 5px;

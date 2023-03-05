@@ -3,12 +3,13 @@ import classes from "./App.module.css";
 import Navbar from "./components/UI/Navbar";
 import Card from "./components/UI/Card";
 import MenuCard from "./components/UI/MenuCard";
+import CartModal from "./components/Cart/CartModal";
 
 function App() {
   return (
     <div>
       <Navbar />
-
+      {/*<CartModal></CartModal>*/}
       <img
         className={classes["background-image"]}
         src={require("./images/header-photo.jpg")}

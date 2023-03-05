@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import AuthContext from "./auth-context";
 
 import styles from "./MenuElementForm.module.css";
 
 const MenuElementForm = (props) => {
-  const [dishQuantity, setDishQuantity] = useState("0");
+  const ctx = useContext(AuthContext);
+
+  const [dishQuantity, setDishQuantity] = useState(0);
 
   const dishQuantityHandler = (event) => {
     setDishQuantity(event.target.value);
@@ -14,13 +17,13 @@ const MenuElementForm = (props) => {
 
     const dish = { ...props.dish, quantity: dishQuantity };
 
-    setDishQuantity("0");
-    console.log(dish);
+    setDishQuantity(0);
+    ctx.countItems(parseInt(dish.quantity));
     return dish;
   };
 
   return (
-    <form className={styles["add-dish-form"]} onSubmit={dishSubmitHandler}>
+    <form className={styles["add-dish-form"]}>
       <label className={styles["add-dish-form-label"]}>Amount</label>
       <input
         className={styles["add-dish-form-input"]}
@@ -28,7 +31,12 @@ const MenuElementForm = (props) => {
         value={dishQuantity}
         onChange={dishQuantityHandler}
       ></input>
-      <button className={styles["add-dish-form-button"]}>+ Add</button>
+      <button
+        className={styles["add-dish-form-button"]}
+        onClick={dishSubmitHandler}
+      >
+        + Add
+      </button>
     </form>
   );
 };

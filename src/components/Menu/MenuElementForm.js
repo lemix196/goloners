@@ -2,16 +2,25 @@ import React, { useState } from "react";
 
 import styles from "./MenuElementForm.module.css";
 
-const MenuElementForm = () => {
+const MenuElementForm = (props) => {
   const [dishQuantity, setDishQuantity] = useState("0");
 
   const dishQuantityHandler = (event) => {
     setDishQuantity(event.target.value);
-    console.log(dishQuantity);
+  };
+
+  const dishSubmitHandler = (event) => {
+    event.preventDefault();
+
+    const dish = { ...props.dish, quantity: dishQuantity };
+
+    setDishQuantity("0");
+    console.log(dish);
+    return dish;
   };
 
   return (
-    <form className={styles["add-dish-form"]}>
+    <form className={styles["add-dish-form"]} onSubmit={dishSubmitHandler}>
       <label className={styles["add-dish-form-label"]}>Amount</label>
       <input
         className={styles["add-dish-form-input"]}

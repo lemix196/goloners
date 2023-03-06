@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import classes from "./App.module.css";
 
 import Navbar from "./components/UI/Navbar";
@@ -6,10 +8,18 @@ import MenuCard from "./components/UI/MenuCard";
 import CartModal from "./components/Cart/CartModal";
 
 function App() {
+  const [isCartShown, setIsCartShown] = useState(false);
+
+  const showCartHandler = () => {
+    setIsCartShown(true);
+  };
+
+
+
   return (
     <div>
-      <Navbar />
-      {/*<CartModal></CartModal>*/}
+      <Navbar showCart={showCartHandler} />
+      {isCartShown && <CartModal />}
       <img
         className={classes["background-image"]}
         src={require("./images/header-photo.jpg")}

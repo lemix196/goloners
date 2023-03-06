@@ -13,6 +13,7 @@ const MenuCard = (props) => {
         
         <React.Fragment>
           <MenuElement
+            key={dish.id}
             dishName={dish.dishName}
             description={dish.description}
             price={dish.price}

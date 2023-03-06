@@ -11,6 +11,7 @@
 # production
 /build
 /public/color-palette.css
+/public/notes.txt
 
 # misc
 .DS_Store

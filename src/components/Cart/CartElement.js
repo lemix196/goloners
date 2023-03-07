@@ -10,8 +10,8 @@ const CartElement = (props) => {
         {props.price}
         <span>{props.quantity}</span>
       </h4>
-      <button>-</button>
-      <button>+</button>
+      <CartElementButton buttonText="-" />
+      <CartElementButton buttonText="+" />
     </li>
   );
 };

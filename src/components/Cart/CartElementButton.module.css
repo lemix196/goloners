@@ -1,0 +1,25 @@
+.cart-element-button {
+    background-color: #f8f8f8;
+    color: #dc2f2f;
+    margin: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #db7373;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: inherit;
+    height: 40px;
+    width: 60px;
+    text-align: center;
+}
+
+.cart-element-button:hover {
+    background-color: #dc2f2f;
+    color: #f8f8f8;
+}
+
+.cart-element-button:active {
+    background-color: #db7373;
+    color: #363636;
+    border-color: #363636;
+}

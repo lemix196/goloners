@@ -1,17 +1,20 @@
 import React from "react";
 
-import classes from "./CartModal.module.css";
+import styles from "./CartModal.module.css";
+
+import CartElement from "./CartElement";
 
 const CartModal = (props) => {
   return (
-    <div className={classes["cart-modal"]}>
-      <div className={classes["cart-modal-window"]}>
-        <h2 className={classes["h2"]}>
+    <div className={styles["cart-modal"]}>
+      <div className={styles["cart-modal-window"]}>
+        <h2 className={styles["h2"]}>
           Your order:
-          <span className={classes["cart-modal-close"]}>&times;</span>
+          <span className={styles["cart-modal-close"]}>&times;</span>
         </h2>
-
-        {props.children}
+        <ul>
+          <CartElement />
+        </ul>
       </div>
     </div>
   );

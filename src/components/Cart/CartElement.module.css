@@ -1,0 +1,36 @@
+.cart-element {
+  list-style-type: none;
+  display: flex;
+  position: relative;
+}
+
+.cart-element-name {
+  text-align: left;
+  color: #363636;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.cart-element-price {
+  position: absolute;
+  top: 20px;
+  display: block;
+  color: #dc2f2f;
+  margin-bottom: 0;
+}
+
+.cart-element-quantity {
+  margin-left: 20px;
+  color: #8b8b8b;
+}
+
+.cart-element-buttons {
+  position: absolute;
+  display: flex;
+  right: 0;
+  margin: 30px 30px 30px 30px;
+  padding: 30px;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

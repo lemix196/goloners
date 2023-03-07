@@ -1,0 +1,59 @@
+.cancel-button {
+  background-color: #f8f8f8;
+  border-color: #ff894c;
+  border-style: solid;
+  border-radius: 20px 5px 5px 10px;
+  border-width: 1px;
+  width: 120px;
+  height: 40px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: 0.3s background-color, 0.3s color, 0.3s border-color;
+}
+
+.cancel-button:hover {
+  background-color: #363636;
+  color: #f8f8f8;
+  border-color: #363636;
+  transition: 0.3s background-color, 0.3s color, 0.3s border-color;
+}
+
+.cancel-button:active {
+    background-color: #141414;
+    color: #f8f8f8;
+    border-color: #141414;
+    box-shadow: -2px -2px 5px rgba(0,0,0,0.3);
+    transition: 0.3s background-color, 0.3s color, 0.3s border-color, 0.3s box-shadow;
+  }
+
+
+.confirm-button {
+  background-color: #ff894c;
+  border-color: #ff894c;
+  border-style: solid;
+  border-radius: 5px 10px 20px 5px;
+  border-width: 1px;
+  width: 120px;
+  height: 40px;
+  color: #f8f8f8;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: 0.3s background-color, 0.3s color, 0.3s border-color;
+}
+
+.confirm-button:hover {
+    background-color: #dc2f2f;
+    color: #363636;
+    border-color: #ff894c;
+    transition: 0.3s background-color, 0.3s color, 0.3s border-color;
+}
+
+.confirm-button:active {
+    background-color: #a72323;
+    color: #f8f8f8;
+    border-color: #a72323;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: 0.3s background-color, 0.3s color, 0.3s border-color, 0.3s box-shadow;
+}

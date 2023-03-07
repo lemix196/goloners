@@ -15,6 +15,10 @@ const CartModal = (props) => {
         <ul>
           <CartElement />
         </ul>
+        <div className={styles["cart-modal-total"]}>
+          <h2>Total:</h2>
+          <h2>20.00$</h2>
+        </div>
       </div>
     </div>
   );

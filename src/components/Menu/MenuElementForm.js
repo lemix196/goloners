@@ -15,7 +15,12 @@ const MenuElementForm = (props) => {
   const dishSubmitHandler = (event) => {
     event.preventDefault();
 
+    // Add dish quantity for cart counting
     const dish = { ...props.dish, quantity: dishQuantity };
+
+    // Update cart
+    ctx.updateCart(dish)
+    console.log(ctx.cartList)
 
     setDishQuantity(0);
     ctx.countItems(parseInt(dish.quantity));

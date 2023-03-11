@@ -5,19 +5,37 @@ const AuthContext = React.createContext({
   cartItemsCost: 0,
   countItems: () => {},
   countCost: () => {},
+  updateCart: () => {},
 });
 
 export const AuthContextProvider = (props) => {
   const [countItems, setCountItems] = useState(0);
   const [countCost, setCountCost] = useState(0);
+  const [cartList, updateCart] = useState([]);
 
   const countItemsHandler = (dishQuantity) => {
     setCountItems(countItems + dishQuantity);
-    console.log(countItems);
   };
 
   const countCostHandler = (dishPrice) => {
     setCountCost(countCost + dishPrice);
+  };
+
+  const updateCartHandler = (dishObject) => {
+    if (cartList.length === 0) {
+      updateCart([...cartList, dishObject]);
+      return null;
+    }
+
+    for (const obj of cartList) {
+      if (obj.id === dishObject.id) {
+        console.log("Increasing quantity...");
+        obj.quantity = (parseInt(obj.quantity) + parseInt(dishObject.quantity)).toString();
+        return null;
+      }
+    }
+    console.log("Adding new object...");
+    updateCart([...cartList, dishObject]);
   };
 
   return (
@@ -27,6 +45,8 @@ export const AuthContextProvider = (props) => {
         cartItemsCost: countCost,
         countItems: countItemsHandler,
         countCost: countCostHandler,
+        updateCart: updateCartHandler,
+        cartList: cartList,
       }}
     >
       {props.children}

@@ -17,8 +17,9 @@ export const AuthContextProvider = (props) => {
     setCountItems(countItems + dishQuantity);
   };
 
-  const countCostHandler = (dishPrice) => {
-    setCountCost(countCost + dishPrice);
+  const countCostHandler = (dishObj) => {
+    const sum = parseFloat(countCost) + parseInt(dishObj.quantity) * parseFloat(dishObj.price);
+    setCountCost(sum.toString());
   };
 
   const updateCartHandler = (dishObject) => {
@@ -29,12 +30,12 @@ export const AuthContextProvider = (props) => {
 
     for (const obj of cartList) {
       if (obj.id === dishObject.id) {
-        console.log("Increasing quantity...");
-        obj.quantity = (parseInt(obj.quantity) + parseInt(dishObject.quantity)).toString();
+        obj.quantity = (
+          parseInt(obj.quantity) + parseInt(dishObject.quantity)
+        ).toString();
         return null;
       }
     }
-    console.log("Adding new object...");
     updateCart([...cartList, dishObject]);
   };
 

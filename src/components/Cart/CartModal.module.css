@@ -41,6 +41,12 @@
   left: 40%;
 }
 
+.cart-modal-close:hover {
+ color: #f8f8f8;
+ cursor: pointer;
+}
+
+
 .cart-modal-total {
   display: flex;
   justify-content: space-between;

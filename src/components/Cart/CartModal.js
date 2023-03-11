@@ -11,7 +11,7 @@ const CartModal = (props) => {
       <div className={styles["cart-modal-window"]}>
         <h2 className={styles["h2"]}>
           Your order:
-          <span className={styles["cart-modal-close"]}>&times;</span>
+          <span className={styles["cart-modal-close"]} onClick={props.hideCart} >&times;</span>
         </h2>
         <ul>
           <CartElement />

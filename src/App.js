@@ -14,12 +14,17 @@ function App() {
     setIsCartShown(true);
   };
 
+  const hideCartHandler = () => {
+    setIsCartShown(false);
+    console.log("Cart is hidden.")
+  };
+
 
 
   return (
     <div>
       <Navbar showCart={showCartHandler} />
-      {isCartShown && <CartModal />}
+      {isCartShown && <CartModal hideCart={hideCartHandler} />}
       <img
         className={classes["background-image"]}
         src={require("./images/header-photo.jpg")}

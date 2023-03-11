@@ -20,7 +20,7 @@ const CartModal = (props) => {
           <h2>Total:</h2>
           <h2>20.00$</h2>
         </div>
-        <CartMainButtons />
+        <CartMainButtons hideModal={props.hideCart} />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const MenuElement = (props) => {
     <div className={styles["dish"]}>
       <h2 className={styles["dish-name"]}>{props.dishName}</h2>
       <p className={styles["dish-description"]}>{props.description}</p>
-      <h2 className={styles["dish-price"]}>{props.price}</h2>
+      <h2 className={styles["dish-price"]}>{props.price}$</h2>
     </div>
   );
 };

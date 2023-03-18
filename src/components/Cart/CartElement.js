@@ -11,11 +11,13 @@ const CartElement = (props) => {
         <h2 className={styles["cart-element-name"]}>{props.dish.dishName}</h2>
         <h4 className={styles["cart-element-price"]}>
           {props.dish.price}$
-          <span className={styles["cart-element-quantity"]}>x{props.dish.quantity}</span>
+          <span className={styles["cart-element-quantity"]}>
+            x{props.dish.quantity}
+          </span>
         </h4>
         <div className={styles["cart-element-buttons"]}>
-          <CartElementButton buttonText="-" />
-          <CartElementButton buttonText="+" />
+          <CartElementButton dishId={props.dish.id} buttonText="-" />
+          <CartElementButton dishId={props.dish.id} buttonText="+" />
         </div>
       </li>
       <hr />

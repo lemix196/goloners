@@ -22,9 +22,9 @@ const MenuElementForm = (props) => {
     ctx.updateCart(dish)
 
     // Update summary cost
-    ctx.countCost(dish);
     setDishQuantity(0);
     ctx.countItems(parseInt(dish.quantity));
+    ctx.countCost(dish);
     return dish;
   };
 

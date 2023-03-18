@@ -18,7 +18,9 @@ export const AuthContextProvider = (props) => {
   };
 
   const countCostHandler = (dishObj) => {
-    const sum = parseFloat(countCost) + parseInt(dishObj.quantity) * parseFloat(dishObj.price);
+    const sum =
+      parseFloat(countCost) +
+      parseInt(dishObj.quantity) * parseFloat(dishObj.price);
     setCountCost(sum.toString());
   };
 
@@ -39,6 +41,30 @@ export const AuthContextProvider = (props) => {
     updateCart([...cartList, dishObject]);
   };
 
+  const dishIncreaseHandler = (dishId) => {
+    for (const obj of cartList) {
+      if (obj.id === dishId) {
+        obj.quantity = parseInt(obj.quantity) + 1;
+        updateCart([...cartList]);
+        setCountItems(countItems + 1);
+        setCountCost(parseFloat(countCost) + parseFloat(obj.price));
+        return null;
+      }
+    }
+  };
+
+  const dishDecreaseHandler = (dishId) => {
+    for (const obj of cartList) {
+      if (obj.id === dishId) {
+        obj.quantity = parseInt(obj.quantity) - 1;
+        updateCart([...cartList]);
+        setCountItems(countItems - 1);
+        setCountCost(parseFloat(countCost) - parseFloat(obj.price));
+        return null;
+      }
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -47,6 +73,8 @@ export const AuthContextProvider = (props) => {
         countItems: countItemsHandler,
         countCost: countCostHandler,
         updateCart: updateCartHandler,
+        dishIncrease: dishIncreaseHandler,
+        dishDecrease: dishDecreaseHandler,
         cartList: cartList,
       }}
     >
